@@ -1,6 +1,7 @@
 import React from "react";
 import SideBar from "@/components/SideBar";
 import Image from "next/image";
+import MobileNav from "@/components/MobileNav";
 
 
 export default function RootLayout({
@@ -15,9 +16,10 @@ export default function RootLayout({
             <div className="flex sze-full flex-col">
                <div className="root-layout">
                    <Image src="/icons/logo.svg" width={30} height={30} alt="menu icon"/>
+                   <MobileNav user={loggedIn}/>
                </div>
+                {children}
             </div>
-            {children}
         </main>
     );
 }
